@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-crema: #fdf6f3;
+  --color-crema-osc: #f6e9e4;
+  --color-rosa: #e58a9d;
+  --color-rosa-suave: #f8cdd6;
+  --color-rosa-claro: #fdebee;
+  --color-rosa-osc: #b94862;
+  --color-lavanda: #a78bc7;
+  --color-lavanda-suave: #eadff3;
+  --color-lavanda-osc: #6f5590;
+  --color-tinta: #2e2a2f;
+  --color-tinta-suave: #6b6068;
+  --color-dorado: #d4af6a;
+
+  --font-display: var(--font-kaushan), 'Brush Script MT', cursive;
+  --font-sans: var(--font-nunito), ui-rounded, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: var(--color-crema);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-crema);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Foco visible para quien navega con teclado */
+:focus-visible {
+  outline: 3px solid var(--color-lavanda-osc);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Barra de categorías sin barra de desplazamiento visible */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
