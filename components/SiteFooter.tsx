@@ -39,6 +39,17 @@ export default function SiteFooter() {
           <p className="mt-1 flex items-center justify-center gap-1 sm:justify-end">
             © {new Date().getFullYear()} Isarte · Bolivia <Heart className="size-3.5 fill-rosa text-rosa" aria-hidden />
           </p>
+          <p className="mt-1 text-xs text-tinta-suave sm:text-right">
+            Desarrollado por{' '}
+            <a
+              href="https://edaisoftware.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-rosa-osc hover:underline"
+            >
+              EDAI TECH
+            </a>
+          </p>
         </div>
       </div>
 
